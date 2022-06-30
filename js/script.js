@@ -31,6 +31,7 @@
 const btn = document.getElementById('start-game'); 
 let game = document.getElementById('game');
 
+
 // functions
 const createGrid = () => {
     // ripeto 100 volte, 1 per ogni griglia del gioco
@@ -41,18 +42,18 @@ const createGrid = () => {
         // porto nel dom
         game.appendChild(cellGrid);
         //stampo i numeri all'interno dei rispettivi div
-        for ( j = 1; j <= 100; j++ ) {
-            cellGrid.innerText = `${j}`
-        }
-        }
+        // for ( j = 1; j <= 100; j++ ) {
+        //     cellGrid.innerText = `${j}`
+        // }
     }
+}
 
 
 
 //azione al click del bottone 
 btn.addEventListener('click',() => {       
-// creo griglie
-const game = document.getElementById('game'); 
+    // creo griglie
+    grid = createGrid();
 })
 
 
