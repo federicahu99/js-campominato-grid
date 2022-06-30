@@ -31,30 +31,41 @@
 const btn = document.getElementById('start-game'); 
 let game = document.getElementById('game');
 
-
 // functions
-const createGrid = () => {
+const createGridDifficultyOne = () => {
+    let number= 1;
     // ripeto 100 volte, 1 per ogni griglia del gioco
-    for( i= 1; i <= 100; i++) {
-        // creo il div all'interno del html e gli aggiungo la classe
-        let cellGrid = document.createElement('div');
-        cellGrid.classList.add('cell')
-        // porto nel dom
-        game.appendChild(cellGrid);
+
+    for( i = 1; i <= 10; i++) {
         //stampo i numeri all'interno dei rispettivi div
-        // for ( j = 1; j <= 100; j++ ) {
-        //     cellGrid.innerText = `${j}`
-        // }
+        for ( j = 1; j <= 10; j++) {
+            // creo il div all'interno del html e gli aggiungo la classe
+            let cell = document.createElement('div');
+            cell.classList.add('cell')
+        
+            // porto nel dom
+            game.appendChild(cell);
+
+            cell.innerText = number;
+            //incremento
+            number++;
+            
+            //azione per colorare di blu cliccano sulla cella 
+            cell.addEventListener('click', (event) => {
+                event.target.classList.toggle('clicked')
+                console.log(event.target.innerText)
+            })
+        }
     }
 }
-
-
 
 //azione al click del bottone 
 btn.addEventListener('click',() => {       
     // creo griglie
-    grid = createGrid();
+    grid = createGridDifficultyOne();
 })
+
+
 
 
 
