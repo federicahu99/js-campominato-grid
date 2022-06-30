@@ -30,15 +30,18 @@
 //prendo i miei elementi
 const btn = document.getElementById('start-game'); 
 let game = document.getElementById('game');
+const difficulty = document.getElementById('game-option')
+let row = 10;
+let col = 10;
 
 // functions
-const createGridDifficultyOne = () => {
+const createGrid = (row= 10, cols =10) => {
     let number= 1;
     // ripeto 100 volte, 1 per ogni griglia del gioco
 
-    for( i = 1; i <= 10; i++) {
+    for( i = 1; i <= row; i++) {
         //stampo i numeri all'interno dei rispettivi div
-        for ( j = 1; j <= 10; j++) {
+        for ( j = 1; j <= cols; j++) {
             // creo il div all'interno del html e gli aggiungo la classe
             let cell = document.createElement('div');
             cell.classList.add('cell')
@@ -60,13 +63,11 @@ const createGridDifficultyOne = () => {
 }
 
 //azione al click del bottone 
+
 btn.addEventListener('click',() => {       
     // creo griglie
-    grid = createGridDifficultyOne();
+    grid = createGrid();
 })
-
-
-
 
 
 
