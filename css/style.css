@@ -10,18 +10,13 @@
 /* general */
 
 body {
-    background-color: deepskyblue;
+    background-color: lightseagreen;
     width: 800px;
     height: 500px;
     margin: 10px auto;
 
 }
 
-div {
-    width: calc(800px / 10);
-    height: calc(500px / 10);
-    border: 1px solid white;    
-}
 
 /* body */
 #game {
@@ -36,4 +31,18 @@ div {
     color: white;
     border-color: orange;
     margin-bottom: 15px;
+    display: block;
+    margin:  10px auto;
+}
+
+.cell {
+    width: calc(800px / 10);
+    height: calc(500px / 10);
+    border: 1px solid white;    
+}
+
+/* JS */
+
+.clicked  {
+    background-color: dodgerblue;
 }
