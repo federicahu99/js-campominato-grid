@@ -1,0 +1,39 @@
+/* reset */
+ 
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* general */
+
+body {
+    background-color: deepskyblue;
+    width: 800px;
+    height: 500px;
+    margin: 10px auto;
+
+}
+
+div {
+    width: calc(800px / 10);
+    height: calc(500px / 10);
+    border: 1px solid white;    
+}
+
+/* body */
+#game {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#start-game{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: orange;
+    color: white;
+    border-color: orange;
+    margin-bottom: 15px;
+}
